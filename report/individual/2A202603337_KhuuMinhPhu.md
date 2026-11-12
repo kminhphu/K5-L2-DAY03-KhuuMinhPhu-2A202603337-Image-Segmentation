@@ -4,7 +4,7 @@
 
 - Mã học viên theo lớp: 2A202603337
 - Ngày / CVAT local: 11/11/2026
-- Công cụ đã dùng: 
+- Công cụ đã dùng: CVAT
 
 Mã học viên là mã lớp cấp; không cần ghi họ tên trong report nếu kênh [LMS](https://aithucchien.vinuni.edu.vn) đã nhận diện bạn. Chỉ ghi công cụ thật sự đã dùng; không có SAM vẫn làm bài bình thường.
 
@@ -31,20 +31,20 @@ Nếu export lỗi, ghi task, dữ liệu đã Save đến đâu và lỗi đã 
 
 Chọn object đầu tiên bạn tự vẽ ở `medium_instance`, trước khi xem bất kỳ đề xuất tự động nào cho object đó. Ghi ảnh/vị trí đủ để tìm lại; “quy tắc biên” là lý do bạn chọn hoặc dừng mask ở ranh đó.
 
-- Ảnh, vị trí và object Medium đầu tiên tự vẽ: …
-- Class và quy tắc tôi dùng để chọn biên: …
-- Nếu dùng gợi ý sau đó: vùng gợi ý sai/đúng, hành động sửa/giữ và lý do: …
+- Ảnh, vị trí và object Medium đầu tiên tự vẽ: ảnh 000000181542.jpg, đối tượng đầu tiên là bus
+- Class và quy tắc tôi dùng để chọn biên: xác định đối tượng thuộc class dựa vào hình dạng và đường viền quan sát được để xác định vùng cần gán nhãn
+- Nếu dùng gợi ý sau đó: vùng gợi ý sai/đúng, hành động sửa/giữ và lý do: Không sử dụng gợi ý tự động, việc xác định đối tượng và đường biên được thực hiện dựa trên hình ảnh thực tế
 - Nếu không dùng gợi ý: ghi “không dùng”; vẫn giải thích một quyết định gán nhãn của mình.
 
 ## 3. Một lỗi tôi tìm thấy và sửa
 
 Chọn một lỗi **có thật** trong bài. Nếu công cụ lỗi khiến bạn chưa sửa được, ghi rõ đã thử gì và cần coach hỗ trợ gì; không ghi “đã sửa” khi chưa sửa.
 
-- Task/ảnh/vùng: …
-- Lỗi thuộc loại: sai lớp / thiếu-thừa vật / gộp-tách / biên / phủ vùng / khác: …
-- Bằng chứng tôi nhìn thấy: …
-- Quy tắc và hành động sửa: …
-- Sau sửa đã Save và export lại chưa? …
+- Task/ảnh/vùng: Task medium_instance, ảnh 000000373353.jpg 
+- Lỗi thuộc loại: sai lớp / thiếu-thừa vật / gộp-tách / biên / phủ vùng / khác: Thiếu đối tượng
+- Bằng chứng tôi nhìn thấy: Trong quá trình kiểm tra annotation, phát hiện có đối tượng xuất hiện trong ảnh nhưng chưa được gán nhãn
+- Quy tắc và hành động sửa: kiểm tra lại hình ảnh, bổ sung annotation cho đối tượng còn thiếu
+- Sau sửa đã Save và export lại chưa? Đã sửa và Save sau đó export lại
 
 Nếu bạn **đã xem Summary tự đánh giá trên GitHub Actions hoặc tự chạy script**, ghi ngắn một kết quả liên quan lỗi vừa sửa (ví dụ task, metric trước/sau nếu có): … / chưa có điểm. Scorecard ba tier tối đa **82**, không phải điểm cuối trên 100. Không tự ghi PASS/top 3/bonus; người phụ trách xác nhận theo tiêu chí lớp. Không đưa file ground truth vào fork.
 
